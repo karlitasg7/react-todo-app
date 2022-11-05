@@ -62,8 +62,13 @@ textarea:focus {
 }
 
 .TodoForm-button--add {
-    background: #61DAFA;
+    background: #6062f3;
     box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+}
+
+.TodoForm-button--add:hover {
+    background: #9697fc;
+    color: white;
 }
 
 .TodoForm-button--cancel {

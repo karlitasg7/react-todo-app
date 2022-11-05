@@ -17,7 +17,12 @@ function TodoForm() {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+
+        if (newTodoValue.trim() === '') {
+            return;
+        }
+
+        addTodo(newTodoValue.trim());
         setOpenModal(false);
     };
 
@@ -31,7 +36,8 @@ function TodoForm() {
             <textarea
                 value={newTodoValue}
                 onChange={onChange}
-                placeholder="Add your new todo"
+                placeholder=""
+                autoFocus
             />
             <div className="TodoForm-buttonContainer">
                 <button
